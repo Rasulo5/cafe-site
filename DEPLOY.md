@@ -23,6 +23,7 @@ npm run build
 ### 3. Загрузка файлов
 
 **Через файловый менеджер:**
+
 1. Откройте **Файловый менеджер** в панели
 2. Перейдите в папку `public_html` или `www`
 3. Загрузите архивом:
@@ -33,6 +34,7 @@ npm run build
    - Папка `public`
 
 **Или через FTP (FileZilla):**
+
 - Хост: `ваш-домен.ru` или IP сервера
 - Логин: из письма Timeweb
 - Пароль: из письма Timeweb
@@ -54,13 +56,13 @@ npm run build
 Создайте файл `server.js` в корне проекта:
 
 ```javascript
-const { createServer } = require('http');
-const next = require('next');
-const { parse } = require('url');
+const { createServer } = require("http");
+const next = require("next");
+const { parse } = require("url");
 
 const port = parseInt(process.env.PORT, 10) || 3000;
-const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev, hostname: 'localhost', port });
+const dev = process.env.NODE_ENV !== "production";
+const app = next({ dev, hostname: "localhost", port });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
@@ -133,7 +135,8 @@ npm run build
 Все файлы из папки `out/` загрузите в `public_html/` через FTP.
 
 ⚠️ **Минусы:**
-- Не работают API Routes (/api/*)
+
+- Не работают API Routes (/api/\*)
 - Не работает серверный рендеринг
 - Корзина не будет отправлять заказы через API
 
@@ -156,18 +159,22 @@ npm run build
 ## 🔧 Если что-то не работает
 
 ### Ошибка 500
+
 - Проверьте логи в панели хостинга
 - Убедитесь, что все зависимости установлены
 
 ### Не загружаются изображения
+
 - Проверьте `next.config.mjs` настройки images
 - Убедитесь, что внешние URL разрешены
 
 ### Не работает админка
+
 - Проверьте `.env.local` на сервере
 - Убедитесь, что API Routes работают
 
 ### Ошибка 404 на страницах
+
 - Включите `trailingSlash: true` в next.config.mjs
 - Пересоберите проект
 
@@ -176,6 +183,7 @@ npm run build
 ## 📞 Поддержка Timeweb
 
 Если возникнут проблемы:
+
 - Чат поддержки в панели управления
 - Телефон: 8 (800) 555-10-77
 - База знаний: https://timeweb.cloud/help
