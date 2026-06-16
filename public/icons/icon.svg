@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="64" fill="#d97706"/>
+  
+  <!-- Plate -->
+  <ellipse cx="256" cy="280" rx="140" ry="40" fill="#fef3c7"/>
+  <ellipse cx="256" cy="260" rx="140" ry="140" fill="#fef3c7"/>
+  
+  <!-- Steam -->
+  <path d="M256 100 Q246 80 256 60 Q266 80 256 100" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0.8"/>
+  <path d="M236 120 Q226 100 236 80 Q246 100 236 120" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  <path d="M276 120 Q266 100 276 80 Q286 100 276 120" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Utensils -->
+  <path d="M180 200 L180 320" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+  <circle cx="180" cy="170" r="30" fill="#fff"/>
+  
+  <path d="M332 170 L332 320" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+  <path d="M312 170 L332 170 L352 170" stroke="#fff" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

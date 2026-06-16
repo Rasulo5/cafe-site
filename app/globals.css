@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fffbeb;
+  color: #292524;
+}
+
+::-webkit-scrollbar {
+  width: 11px;
+}
+::-webkit-scrollbar-track {
+  background: #fef3c7;
+}
+::-webkit-scrollbar-thumb {
+  background: #d97706;
+  border-radius: 9999px;
+  border: 2px solid #fef3c7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309;
+}
+
+body {
+  background-color: #fffbeb; /* amber-50 */
+  color: #292524; /* stone-800 */
+}
+
+/* Кастомные скроллбары */
+::-webkit-scrollbar {
+  width: 11px;
+}
+::-webkit-scrollbar-track {
+  background: #fef3c7; /* amber-100 */
+}
+::-webkit-scrollbar-thumb {
+  background: #d97706; /* amber-600 */
+  border-radius: 9999px;
+  border: 2px solid #fef3c7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309; /* amber-700 */
+}
+
+body {
+  background-color: #fffbeb; /* amber-50 */
+  color: #292524; /* stone-800 */
+}
+
+/* Анимация появления корзины */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* Кастомные скроллбары */
+::-webkit-scrollbar {
+  width: 11px;
+}
+::-webkit-scrollbar-track {
+  background: #fef3c7; /* amber-100 */
+}
+::-webkit-scrollbar-thumb {
+  background: #d97706; /* amber-600 */
+  border-radius: 9999px;
+  border: 2px solid #fef3c7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309; /* amber-700 */
+}
+
+body {
+  background-color: #fffbeb; /* amber-50 */
+  color: #292524; /* stone-800 */
+}
+
+/* Р С™Р В°РЎРѓРЎвЂљР С•Р СР Р…РЎвЂ№Р в„– РЎРѓР С”РЎР‚Р С•Р В»Р В»Р В±Р В°РЎР‚ */
+::-webkit-scrollbar {
+  width: 11px;
+}
+::-webkit-scrollbar-track {
+  background: #fef3c7; /* amber-100 */
+}
+::-webkit-scrollbar-thumb {
+  background: #d97706; /* amber-600 */
+  border-radius: 9999px;
+  border: 2px solid #fef3c7;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b45309; /* amber-700 */
+}
