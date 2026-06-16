@@ -11,6 +11,8 @@ const nextConfig = {
       },
     ],
   },
+  // Для хостинга
+  trailingSlash: true,
 };
 
 export default nextConfig;
