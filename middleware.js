@@ -6,20 +6,22 @@ export function middleware(request) {
   const token = request.cookies.get("admin_session")?.value;
   const validToken = process.env.ADMIN_TOKEN || "cafe2024-secret-token";
 
-  const isLoginPage = pathname === "/admin/login";
+  const isLoginPage = pathname === "/admin/login" || pathname === "/admin/login/";
   const isAuthed = token === validToken;
 
-  // Если не авторизован и не страница входа — редирект на логин
-  if (!isAuthed && !isLoginPage) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/admin/login";
-    return NextResponse.redirect(url);
+  // Страница входа всегда доступна
+  if (isLoginPage) {
+    // Если авторизован и пытается зайти на страницу входа — редирект на дашборд
+    if (isAuthed) {
+      const url = new URL("/admin", request.url);
+      return NextResponse.redirect(url);
+    }
+    return NextResponse.next();
   }
 
-  // Если авторизован и пытается зайти на страницу входа — редирект на дашборд
-  if (isAuthed && isLoginPage) {
-    const url = request.nextUrl.clone();
-    url.pathname = "/admin";
+  // Если не авторизован и не страница входа — редирект на логин
+  if (!isAuthed) {
+    const url = new URL("/admin/login", request.url);
     return NextResponse.redirect(url);
   }
 
